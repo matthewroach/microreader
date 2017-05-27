@@ -1,5 +1,7 @@
 node_modules
 .sass-cache
+release-builds
 *.bak.*
 .DS_Store
 /.vscode/
+js
