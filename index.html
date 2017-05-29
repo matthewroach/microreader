@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MicroReader</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body style="-webkit-app-region: drag">
+
+		<div class="container">
+			<div id="app"></div>
+		</div>
+
+		<script>
+			const shell = require('electron').shell
+
+
+			// Load JS file
+			const script = document.createElement('script');
+			script.src = process.env.ENV === 'development' ? 'http://localhost:9000/js/app.js' : './js/app.js'
+			document.write(script.outerHTML)
+
+			// Open links externally by default
+			let externalLinks = Array.from(document.querySelectorAll('body'))
+			externalLinks.forEach(function(element) {
+				element.addEventListener('click', function(e) {
+					const tagname = e.target.tagName.toLowerCase()
+					const tagHref = e.target.href
+					if ( tagname === 'a' && tagHref.indexOf('https://micro.blog') !== -1 && tagHref.split('https://micro.blog/').length === 2 ) {
+						if ( tagHref.split('https://micro.blog/')[1].indexOf('/') === -1 ) {
+							e.preventDefault()
+							window.location.hash = 'user/' + tagHref.split('https://micro.blog/')[1]
+							return
+						}
+					}
+					if ( tagname === 'a' && tagHref.indexOf('http') !== -1 ) {
+						e.preventDefault()
+						shell.openExternal(e.target.href)
+					}
+				})
+			}, this)
+
+		</script>
+	</body>
+</html>

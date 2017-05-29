@@ -1,0 +1,41 @@
+{
+  "name": "microreader",
+  "version": "0.1.0",
+  "description": "A desktop application for micro.blog",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run webpack && npm run app:macosx",
+    "dev": "npm run start:electron | npm run webpack:dev",
+    "start:electron": "ENV=development electron .",
+    "app:macosx": "./node_modules/.bin/electron-packager . MicroReader --ignore=node_modules  --icon=images/icon.icns --overwrite --out=release-builds",
+    "webpack": "./node_modules/.bin/webpack",
+    "webpack:dev": "./node_modules/.bin/webpack-dev-server --progress --colors --hot --inline --content-base public/"
+  },
+  "author": {
+    "name": "Matthew Roach",
+    "url": "http//matthewroach.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewroach/microreader.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.7.2",
+    "electron-config": "^1.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "electron-packager": "^8.7.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
+  }
+}

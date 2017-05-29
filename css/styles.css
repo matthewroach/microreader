@@ -1,0 +1,205 @@
+body {
+	font-family: Avenir, "Segoe UI", Verdana;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+p {
+	padding-top: 4px;
+}
+
+img {
+	max-width: 100%;
+	max-height: 500px;
+	height: auto;
+}
+
+.container {
+	max-width: 650px;
+}
+
+.admin_container {
+	max-width: 1200px;
+}
+
+h1 {
+	height: 60px;
+	padding-left: 70px;
+	padding-top: 10px;
+	background-image: url('../images/logo_640.png');
+	background-size: 320px 60px;
+	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 320px) {
+	h1 {
+		height: 53px;
+		background-size: 280px 53px;
+	}
+}
+
+h1 .today {
+	display: none;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 28px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 28px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-top: 0px;
+}
+
+#navbar {
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+
+#nav {
+	padding: 0;
+}
+
+.nav {
+	background: white;
+	border-top: 1px solid rgb(243, 243, 243);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.nav a {
+	display: inline-block;
+	padding: 0.5em;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.nav_divider {
+	display: inline-block;
+	color: white;
+}
+
+.highlight {
+	background-color: #FFF9D6;
+}
+
+#timeline_info {
+	margin-top: 10px;
+}
+
+
+.posts {
+	padding: 1.5em 0 8em 0;
+}
+
+.post {
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.post_avatar {
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 5px;
+	padding-right: 6px;
+}
+
+.post_avatar img {
+	border-radius: 24px;
+}
+
+.post_content {
+	display: inline-block;
+	vertical-align: top;
+	width: 85%;
+}
+
+.post_username a {
+	font-weight: bold;
+	color: #333333;
+}
+
+.post_options {
+	font-size: 12px;
+	color: gray;
+}
+
+.post_options a:not(:first-child) {
+	margin: 0 0 0 1em
+}
+
+.post_time {
+	display: inline-block;
+}
+
+.post_time a {
+	color: gray;
+}
+
+.post_divider {
+	display: inline-block;
+	color: white;
+}
+
+.post_reply {
+	display: inline-block;
+}
+
+.post_delete {
+	display: inline-block;
+}
+
+.post_favorite {
+	display: inline-block;
+}
+
+.post_replybox {
+	padding-top: 10px;
+}
+
+.replybox_button {
+	width: 80px;
+	margin-left: 8px;
+}
+
+
+
+#follow_div {
+	display: inline-block;
+}
+
+
+#post_prompt {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+#post_sample {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+#posting_alert {
+	margin-top: 10px;
+}
+
+.posting_chars_container {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 6px;
+}
