@@ -59,8 +59,8 @@ export default class Login extends React.Component {
 				<hr />
 
 				<p>
-					To get your app token, or create one specifc to this application goto your
-					account page on micro.blog and click "Edit Apps". Go direct to
+					To get your app token, or create one specific to this application go to your
+					account page on micro.blog and click "Edit Apps". Go directly to
 					the <a href="https://micro.blog/account/apps">Edit Apps page</a>, and use an
 					existing token or create a new one. <br />
 					<small><em>* We recommend creating a new one specifc to this application.</em></small>
